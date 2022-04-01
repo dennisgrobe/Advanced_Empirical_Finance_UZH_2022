@@ -2,3 +2,19 @@
 .RData
 .Rproj.user
 *.Rproj
+
+
+# Ignore graphics
+
+*.png
+*.jpg
+*.jpeg
+*.pdf
+
+# ignore .json
+
+*.json
+
+# Ignore Output Files 
+
+*.html
