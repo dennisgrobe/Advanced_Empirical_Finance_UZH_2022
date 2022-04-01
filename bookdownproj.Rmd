@@ -1,3 +1,119 @@
+--- 
+title: "Advanced Empirical Finance "
+author: "Nikolas Anic & Lorenz Gassmann"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+---
+--- 
+title: "Advanced Empirical Finance "
+author: "Nikolas Anic & Lorenz Gassmann"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+---
+
+# Introduction to the course objectives and organisation of the course
+
+This is the R Bookdown file used for the course Advanced Empirical Finance taught by Prof. Dr. Per Östberg in the Spring Semester of 2022 at the University of Zurich. 
+
+The course covers a wide range of topics in Finance as well as Financial Economics and Econometrics topics. While Prof. Dr. Östberg is covering the theoretical aspetcs of the subjects, this Bookdown file covers empirical applications of the topics discussed. Especially, the exercise sessions will introduce both the statistical properties of the methods under considerations and simultaneously offer concise empirical application challenges in which students will learn to apply the lecture topics in the R programming language. 
+
+
+<!--chapter:end:index.Rmd-->
+
+
+# The Programming Environment
+
+Placeholder
+
+
+##  Markdown Files
+### How to create a Markdown File
+### The R Markdown Structure
+#### The use of Code Chunks
+#### The use of White Spaces
+## Coding In R - A concise overview
+### Introduction 
+### Vectors
+#### Creating Vectors
+#### Accessing Vector Elements
+#### Scalar Functions and Vector Algebra 
+### Data Types
+### Data Frames
+### Importing Data
+#### Working Directory 
+#### Reading in Data
+### Data Manipulation
+#### Classical functions
+#### Package `dplyr`
+#### Using multiple commands including split, apply and combine functions
+### Data Reshaping
+#### `tidyr`
+### Beautiful Graphs with `ggplot2`
+#### Basic Workings and Options
+#### Metling a dataframe
+#### Graph Geometry Options
+#### Added Geometry Options
+#### Plotting Multiple Variables
+#### Plotting Time-Series
+#### Further Aesthetics
+#### Facetting plots
+#### Adjusting Scales
+### Dates and Times
+#### Creating Date and Time Objects
+#### Adding time to date
+#### Extracting information from a date
+#### The time-series of Returns - Transformations in R
+#### Checking the time-series dimensions of different dataframes 
+### String Manipulations in R: The `stringr()` package
+#### Basic string operations
+#### Using for loops with `paste0()` and `assign()` to create new variables dynamically
+#### Matching Patterns with Regular Expressions (RegEx)
+### Database Queries
+#### Open the connection to WRDS
+#### Data Sources on WRDS
+#### Syntax of SQL in WRDS
+#### Automating SQL with a pre-defined function
+#### Upsample Data
+
+<!--chapter:end:02-Markdown_and_R_Env.Rmd-->
+
+
+# Risk and Return
+
+Placeholder
+
+
+## The time-series of Returns - Transformations in R
+## Security Returns 
+### Simple Returns
+### Logarithmic Returns
+### Accounting for Dividends: Total Returns
+### Truncating the data
+### Arithmetic vs. Geometric Returns
+### Cumulative Returns
+### Periodic Transformation of Returns
+### Annualising Returns
+## Portfolio Returns
+### Equal-weighted Returns
+### Value-weighted Returns
+### Timing of Returns
+### Nominal vs. Real Returns
+## Individual Security Risk
+### Standard Deviation and Variance
+## Rolling Risk Characteristics
+## Portfolio Risk 
+### Portfolio Risk of two securities
+### Portfolio Risk for Multiple Assets
+## Risk in Extremes and Alternative Risk Measures
+### Value at Risk (VaR)
+#### Gaussian VaR
+#### Historical VaR
+#### Plotting VaR
+## Market Efficiency and independence of risk and return
+### Variance Ratio Test
+
+<!--chapter:end:03-Risk_Return.Rmd-->
+
 # Beta 
 
 ```{r, comment=NA, include=FALSE, echo=FALSE}
@@ -1080,4 +1196,200 @@ After deciding which HC robustness to take for the HC Robust Standard Errors or 
 
 
 
+
+
+<!--chapter:end:04-beta.Rmd-->
+
+
+# Portfolio Theory: Mean-Variance Optimisation and the CAPM
+
+Placeholder
+
+
+## Markowitz Portfolio Theory with two Risky Assets
+### The case of portfolios
+### The set of attainable portfolios
+### The Minimum-Variance Portfolio
+### The role of correlation on the frontier of portfolios
+### Efficient Portfolios with two risky assets
+## Markowitz Portfolio Theory with a Risky and a Risk-Free Asset
+### The Capital Allocation Line (CAL)
+## Markowitz Portfolio Theory with two Risky and a Risk-Free Asset
+### Tangency Portfolio
+### Mutual Fund Theorem and Derivation of the Capital Market Line (CML)
+## Markowitz Portfolio Theory with N Risky Assets
+### The theoretical foundations of N Assets
+#### Repetition of the Matrix Notation
+#### Application to the Swiss Market Index
+### The Minimum Variance Portfolio for N assets
+### The Efficient Frontier for N assets
+#### Determining Efficient Portfolios
+#### Determining the Efficient Frontier
+### The Efficient and Feasible Portfolio CAL of N risky Assets and a risk-free Asset
+#### Tangency Portfolio Calculation with N Assets
+#### Calculating of the CML through the Mutual Fund Theorem
+## The Capital Asset Pricing Model 
+### Intuition of the CAPM
+### Mathematical Derivation of the Security Market Line (SML)
+### Similarity of the CML and SML 
+### Diagnostic Tests of the CAPM
+### Fama-MacBeth (1973) approach
+#### Intuition and Computation of the FM Approach
+#### Interpretation of the FM Approach
+#### Application of the Fama-MacBeth Approach 
+
+<!--chapter:end:05-CAPM.Rmd-->
+
+
+# Factor Models
+
+Placeholder
+
+
+## The idea behind factor models
+## The quest of detecting anomalies
+## The Fama-French Three Factor Model
+## Testing for factor validity
+### Portfolio Sorts 
+### Factor Construction
+#### Cumulative Returns of the Factor-mimicking Portfolios
+#### Fama-MacBeth Regression
+#### Factor Competition
+## Create your own factors: A step-by-step example
+### Setting up the WRDS proxy 
+### Factors of interest 
+### Get the data to construct the factors
+#### Fetch the Swiss Data for Stock Characteristics through datastream equitites  
+#### Fetch the Swiss data for company fundamanetals characteristics through worldscope
+#### Export the monthly and weekly datasets
+### Portfolio Sorts for different factors
+#### Jegadeesh and Titman Momentum Factor
+##### Wide-format factor construction
+##### Long-format factor construction
+#### The Size Factor
+#### The Value Factor
+#### The Profitability Factor
+#### The Investment Factor
+#### The Betting against Beta Factor
+### Double-sorted Portfolios 
+#### Small Minus Big 
+#### High Minus Low, Robust Minus Weak and Conservative Minus Aggressive
+#### Up Minus Down 
+#### Betting Against Beta
+### The importance of data selection
+
+<!--chapter:end:06-Factor_Models.Rmd-->
+
+
+# Statistical Properties 
+
+Placeholder
+
+
+## Random Variables and Probability Distributions: Introdcution
+### The concept of Probability: Important Notions and Definitions
+#### Outcomes, Spaces and Events, Measurable and Immeasurable Spaces
+#### Probability Measure
+#### Modelling Randomness and Chance: The Probability Space
+#### Modelling Randomness and Chance: Probability Measure in Countable and Uncountable Spaces
+### Random Variables
+#### Discrete and Continuous Random Variables 
+### Discrete Random Variables and Distributions
+#### Random Variables in the countable space
+#### Bernoulli Distribution
+#### Binomial Distribution
+#### Multinomial Distribution
+### Continuous Random Variables and Distributions
+#### Density Function: General Case 
+### The cumulative Distribution
+#### Quantile values of Distributions 
+### Continuous Distributions with Appealing Properties
+#### The Normal Distribution
+#### Chi-2 Distribution
+#### Student's t-Distribution
+#### F-Distribution
+#### Log-Normal Distribution
+#### Functions for distribution calculations (d, p, q, r)
+### Moments and Properties of bivariate distributions
+#### Bivariate Distributions for continuous random variables 
+#### Standard bivariate normal distribution
+#### Marginal Distributions 
+#### Conditional Distributions 
+#### Independence
+#### Correlation and Covariance 
+#### Expectation and variance of the sum of two random variables
+### Moments of Probability Distributions
+#### Expected Value (Mean)
+#### Variance and Standard Deviation
+#### Skewness
+#### Kurtosis
+## Matrix Algebra: Introduction
+### Matrices and Vectors 
+### Basic Matrix Operations
+#### Addition and Subtraction
+#### Scalar and Vector Multiplication
+#### Miscellaneous Matrix Properties
+#### Identity, Diagonal as well as Lower and Upper Triangle Matrices 
+### Summation Notation in Matrix Form
+### Systems of Linear Equations
+#### Inverse of a Matrix
+#### Linear Independence and Rank of a Matrix
+### Positive Definite (PD) Matrix
+### Multivariate Probability Distributions
+#### Covariance and Correlation Matrix 
+#### Variance of a linear combination of random vectors 
+#### Covariance between linear combination of two random vectors
+#### Multivariate Normal Distribution
+### Portfolio Construction and Mathematical Properties using Matrix Algebra
+
+<!--chapter:end:A1-Statistical_Props.Rmd-->
+
+
+# Inductive Statistics and Regression Analysis Fundamentals
+
+Placeholder
+
+
+## Inductive Statistics 
+### Point Estimators
+#### Estimators for the mean
+#### Linear Estimators
+#### Quality Criteria of Estimators
+#### Large Sample Criteria
+#### Maximum Likelihood Estimator
+### Confidence Intervals
+#### Confidence Levels and Confidence Interval
+#### Confidence Interval for the mean of a Normal Random Variable
+#### Confidence Interval for the mean of a Normal Random Variable with unknown Variance
+### Hypothesis Testing
+#### Hypotheses
+#### Error Types
+#### One- and Two-Tailed Test for the Parameter $\mu$ of the Normal Distribution When $\sigma^2$ Is Known 
+#### The P-Value
+## Introduction to Regression Analysis
+### The role of correlation
+### The simple / univariate regression model
+#### Estimating the regression model: Simple Ordinary Least Squares (OLS)
+### The multivariate regression model 
+#### Incorporating conditional variation in $\beta$: The Frisch-Waugh Lowell Theorem
+### Goodness of Fit
+#### R2
+#### Adjusted R2
+#### Non-Sequential Model selection metrics
+#### t-statistic and p-values
+#### Idiosyncratic vs. Systematic risk components
+#### F-Statistic
+### Assumption and diagnostic tests of OLS
+#### A1: Linearity
+#### A2 and A5: Error Terms are mean-zero and normally distributed
+#### A3: Heteroskedasticity
+#### A4: Serial Correlation
+#### Heteroskedasticity and Serial Correlation in terms of the variance-covariance matrix
+#### Multicollinearity
+### Properties of the OLS Estimator 
+### Expected Value and Variance of the multivarite OLS estimator if the assumptions hold:
+#### Expected Value
+#### Variance
+
+<!--chapter:end:A2-Inductives_Regression.Rmd-->
 
