@@ -28,7 +28,7 @@ In order to use time-series in securitiy analysis, we first need to modify the d
 ```{r}
 
 # Load in the dataset with your path
-A1 <- read.csv("/Users/nikolasanic/Desktop/Master UZH/Data/A1_dataset_01_Ex_Session.txt", header = T, sep = "\t",  dec = '.')
+A1 <- read.csv("Data/03_Risk_Return/A1_dataset_01_Ex_Session.txt", header = T, sep = "\t",  dec = '.')
 
 # Look the data set to get a better overview
 head(A1)
@@ -71,7 +71,7 @@ To calculate our first return, load the `return_bigfour` csv file into R.
 ```{r}
 
 # Read big four dataset in
-A1_bigfour <- read.csv("/Users/nikolasanic/Desktop/Advanced_Empirical_Finance_Documents/Data/Risk_Return/A1_bigfour_Ex_real.csv", header = T, sep = ",",  dec = '.')
+A1_bigfour <- read.csv("Data/03_Risk_Return/A1_bigfour_Ex_real.csv", header = T, sep = ",",  dec = '.')
 
 
 # Turn it to an xts file
@@ -417,7 +417,7 @@ As such, once we have the data on Outstanding Shares, we can easily compute VW p
 
 ```{r}
 # Load in the Market Cap Dataset
-A4_bigfour <- read.csv("/Users/nikolasanic/Desktop/Advanced_Empirical_Finance_Documents/Data/Risk_Return/A4_bifgour.csv", header = TRUE, sep = ",")
+A4_bigfour <- read.csv("Data/03_Risk_Return/A4_bifgour.csv", header = TRUE, sep = ",")
 
 # Get the dataset into an xts object (since the length of the data frame is the same, we can use the date_bf as column to order the dates after)
 A4ts_bf <- xts(A4_bigfour, order.by = date_bf)
@@ -547,7 +547,7 @@ To understand how inflation works in our asset management setting, it is importa
 ```{r}
 
 # First, load the consumer price index data
-CPI_data <- read.csv("/Users/nikolasanic/Desktop/Master UZH/Data/A1_dataset_05_Ex_Session.txt", header = T, sep = "\t")
+CPI_data <- read.csv("Data/03_Risk_Return/A1_dataset_05_Ex_Session.txt", header = T, sep = "\t")
 
 # Create a time-series object
 CPI_date <- as.Date(CPI_data[,1])
@@ -756,7 +756,7 @@ As such, the Average Variance will approach zero and is thus called the **Idiosy
 
 To see this principle in action, let's take the Big Four portfolio again. Here, we will see a small example that enables you to understand how an increasing portfolio size leads to a lower portfolio risk. Note that I will make use of for loops here as there is much repetition in the code otherwise. But don't worry, I'll explain every step. 
 
-```{r}
+```{r Not working, eval=FALSE}
 
 # First, we need to delete the first column as this has so few observations that we cannot coerce it with any other values. 
 A4_returns_cap <- A4_returns[,-1]

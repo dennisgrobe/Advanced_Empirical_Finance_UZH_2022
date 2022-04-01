@@ -250,3 +250,6 @@ properties-of-the-ols-estimator
 expected-value-and-variance-of-the-multivarite-ols-estimator-if-the-assumptions-hold
 expected-value
 variance
+tangency-portfolio-calculation-with-n-assets
+error-types
+t-statistic-and-p-values
