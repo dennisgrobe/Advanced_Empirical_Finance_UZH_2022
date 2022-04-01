@@ -672,11 +672,11 @@ for (i in Stonks){
   fit_roll_coefs <- fit_roll$coefs[60:dim(stocks_SMI_ts_ret_new_merged)[1],]
   
   # Calculate the respective alpha and beta hat values
-  predicted_alpha <- summary(lm(fit_roll_coefs[,2] ~ lag(fit_roll_coefs[,2])))$coefficients[1,1]
-  predicted_beta <- summary(lm(fit_roll_coefs[,2] ~ lag(fit_roll_coefs[,2])))$coefficients[2,1]
+  predicted_alpha <- summary(lm(fit_roll_coefs[,2] ~ lag.xts(fit_roll_coefs[,2])))$coefficients[1,1]
+  predicted_beta <- summary(lm(fit_roll_coefs[,2] ~ lag.xts(fit_roll_coefs[,2])))$coefficients[2,1]
   
   # Calculate RMSE
-  predicted_rmse <- sqrt(mean(summary(lm(fit_roll_coefs[,2] ~ lag(fit_roll_coefs[,2])))$residuals^2))
+  predicted_rmse <- sqrt(mean(summary(lm(fit_roll_coefs[,2] ~ lag.xts(fit_roll_coefs[,2])))$residuals^2))
   
   # Structure for creating the data frames
   if (i == "Nestle_PS"){
